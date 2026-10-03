@@ -31,6 +31,10 @@ The training transformations contains RandomResizedCrop, RandomHorizontalFlip, C
 
 The validation and test images are resized to 224 x 224 and normalized using the ImageNet mean and standard deviation.
 
+## Secret Recipe
+
+The main improvements came from combining ImageNet-22K pretrained ConvNeXt-Small with full fine-tuning and stronger data augmentation. RandomResizedCrop, RandomHorizontalFlip, ColorJitter, Random Erasing, MixUp, and CutMix were used during training. The final model was selected based on validation accuracy rather than test accuracy.
+
 ## Results
 
 The original Experiment 6 run achieved 97.92% validation accuracy and 97.25% test accuracy.
